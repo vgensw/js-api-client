@@ -92,6 +92,11 @@ export namespace Typeform {
         items: Response[]
       }
     }
+    export namespace Insights {
+      export interface Retrieve {
+        form: any
+      }
+    }
     export namespace Webhooks {
       export interface List {
         items: Webhook[]
@@ -928,6 +933,22 @@ export namespace Typeform {
       score?: number
     }
   }
+    
+  /**
+   * Form insights and date and time of form landing and submission.
+   */
+  export interface Insights {
+    /**
+     * Unique ID for the response. Note that `response_id` values are unique per form but are not unique globally.
+     */
+    form?: any
+    /**
+     * Time of the form landing. In ISO 8601 format, UTC time, to the second, with T as a delimiter between the date and time.
+     */
+    fields?: any
+  }
+    
+    
   /**
    * Typeform Form Settings object.
    */
