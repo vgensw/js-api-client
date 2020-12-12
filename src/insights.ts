@@ -1,5 +1,3 @@
-import { Typeform } from './typeform-types'
-
 export class Insights {
   constructor (private _http: Typeform.HTTPClient) { }
   
@@ -7,7 +5,7 @@ export class Insights {
     args: {
       uid: string
     }
-  ): Promise<Typeform.API.Insights.Retrieve> {
+  ): Promise<any> {
     const { uid } = args
 
     return this._http.request({
