@@ -95,6 +95,7 @@ export namespace Typeform {
     export namespace Insights {
       export interface Retrieve {
         form: any
+        fields: any[]
       }
     }
     export namespace Webhooks {
@@ -945,7 +946,7 @@ export namespace Typeform {
     /**
      * Time of the form landing. In ISO 8601 format, UTC time, to the second, with T as a delimiter between the date and time.
      */
-    fields?: any
+    fields?: any[]
   }
     
     
